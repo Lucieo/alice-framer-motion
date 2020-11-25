@@ -6,6 +6,7 @@ import {
   KeyOnDoor,
   DrinkMe,
 } from 'animations/alice'
+import Head from 'next/head'
 
 const Preview = () => {
   return (
