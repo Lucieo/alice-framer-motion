@@ -5,11 +5,18 @@ import Link from 'next/link'
 import { book } from 'data/alice'
 import { motion } from 'framer-motion'
 
-export default function Wonderland() {
+const chapterCardVariant = {
+  hover: {
+    scale: 1.1,
+    transition: { type: 'spring', bounce: 0.6 },
+  },
+}
+
+export default function AliceFramerMotion() {
   return (
     <Center height="100vh" flexDirection="column">
       <Head>
-        <title>Wonderland App</title>
+        <title>Alice Framer Motion App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <motion.div
@@ -24,22 +31,24 @@ export default function Wonderland() {
       <Flex paddingY={10}>
         {book.chapters.map((chapter, index) => (
           <Box p={4} key={index}>
-            <Link href={`/chapter/${index + 1}`}>
-              <Square
-                size="200px"
-                backgroundImage={`url('/alice/${chapter.illustration}')`}
-                backgroundSize="cover"
-                backgroundPosition="center"
-                borderRadius="lg"
-                boxShadow="2xl"
-                border="2px solid lightgray"
-                cursor="pointer"
-              >
-                <Text fontSize="50px" fontWeight="bold" color="#D4AF37">
-                  {chapter.romanIndex}
-                </Text>
-              </Square>
-            </Link>
+            <motion.div whileHover="hover" variants={chapterCardVariant}>
+              <Link href={`/chapter/${index + 1}`}>
+                <Square
+                  size="200px"
+                  backgroundImage={`url('/alice/${chapter.illustration}')`}
+                  backgroundSize="cover"
+                  backgroundPosition="center"
+                  borderRadius="lg"
+                  boxShadow="2xl"
+                  border="2px solid lightgray"
+                  cursor="pointer"
+                >
+                  <Text fontSize="50px" fontWeight="bold" color="#D4AF37">
+                    {chapter.romanIndex}
+                  </Text>
+                </Square>
+              </Link>
+            </motion.div>
           </Box>
         ))}
       </Flex>
