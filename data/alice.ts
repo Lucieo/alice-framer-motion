@@ -1,4 +1,5 @@
-import { BouncingBunny, ShrinkingAlice, KeyOnDoor } from 'animations/alice'
+import { BouncingBunny, KeyOnDoor } from 'animations/alice'
+import AliceFalling from 'animations/alice/AliceFalling'
 
 enum Position {
   TOP = 'top',
@@ -55,6 +56,10 @@ export const book: Book = {
           ],
         },
         {
+          animation: {
+            position: Position.TOP,
+            component: AliceFalling,
+          },
           type: PageTypes.TEXT,
           paragraphs: [
             'De deux choses l’une, ou le puits était vraiment bien profond, ou elle tombait bien doucement ; car elle eut tout le loisir, dans sa chute, de regarder autour d’elle et de se demander avec étonnement ce qu’elle allait devenir. D’abord elle regarda dans le fond du trou pour savoir où elle allait ; mais il y faisait bien trop sombre pour y rien voir. Ensuite elle porta les yeux sur les parois du puits, et s’aperçut qu’elles étaient garnies d’armoires et d’étagères ; çà et là, elle vit pendues à des clous des cartes géographiques et des images. En passant elle prit sur un rayon un pot de confiture portant cette étiquette, « MARMELADE D’ORANGES. » Mais, à son grand regret, le pot était vide : elle n’osait le laisser tomber dans la crainte de tuer quelqu’un ; aussi s’arrangea-t-elle de manière à le déposer en passant dans une des armoires.',
@@ -92,10 +97,6 @@ export const book: Book = {
         },
         {
           type: PageTypes.TEXT,
-          animation: {
-            position: Position.TOP,
-            component: ShrinkingAlice,
-          },
           paragraphs: [
             '« Je me sens toute drôle, » dit Alice, « on dirait que je rentre en moi-même et que je me ferme comme un télescope. » C’est bien ce qui arrivait en effet. Elle n’avait plus que dix pouces de haut, et un éclair de joie passa sur son visage à la pensée qu’elle était maintenant de la grandeur voulue pour pénétrer par la petite porte dans ce beau jardin. Elle attendit pourtant quelques minutes, pour voir si elle allait rapetisser encore. Cela lui faisait bien un peu peur. « Songez donc, » se disait Alice, « je pourrais bien finir par m’éteindre comme une chandelle. Que deviendrais-je alors ? » Et elle cherchait à s’imaginer l’air que pouvait avoir la flamme d’une chandelle éteinte, car elle ne se rappelait pas avoir jamais rien vu de la sorte.',
             'Un moment après, voyant qu’il ne se passait plus rien, elle se décida à aller de suite au jardin ; mais hélas, pauvre Alice ! en arrivant à la porte, elle s’aperçut qu’elle avait oublié la petite clef d’or. Elle revint sur ses pas pour la prendre sur la table. Bah ! impossible d’atteindre à la clef qu’elle voyait bien clairement à travers le verre. Elle fit alors tout son possible pour grimper le long d’un des pieds de la table, mais il était trop glissant ; et enfin, épuisée de fatigue, la pauvre enfant s’assit et pleura.',
