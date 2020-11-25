@@ -2,7 +2,7 @@ import { Button, Center, Image, Box } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const drinkMeVariant = {
+const bottleVariant = {
   hidden: {
     opacity: 0,
     y: 0,
@@ -24,7 +24,7 @@ const drinkMeVariant = {
   },
 }
 
-const dishesVariants = {
+const foodVariant = {
   visible: {
     opacity: 0,
     y: -50,
@@ -50,33 +50,21 @@ const DrinkMe = () => {
         <AnimatePresence onExitComplete={() => setDisabledBtn(false)}>
           {!isPotionEmpty && (
             <motion.div
-              variants={drinkMeVariant}
+              variants={bottleVariant}
               animate="visible"
               initial="hidden"
               exit="exit"
             >
-              <motion.div
-                variants={dishesVariants}
-                initial={false}
-                custom={-50}
-              >
+              <motion.div variants={foodVariant} initial={false} custom={-50}>
                 <Image src="/alice/candy.png" h="80px" />
               </motion.div>
-              <motion.div
-                variants={dishesVariants}
-                initial={false}
-                custom={100}
-              >
+              <motion.div variants={foodVariant} initial={false} custom={100}>
                 <Image src="/alice/pineapple.png" h="80px" />
               </motion.div>
-              <motion.div
-                variants={dishesVariants}
-                initial={false}
-                custom={-100}
-              >
+              <motion.div variants={foodVariant} initial={false} custom={-100}>
                 <Image src="/alice/dinde.png" h="80px" />
               </motion.div>
-              <motion.div variants={dishesVariants} initial={false} custom={50}>
+              <motion.div variants={foodVariant} initial={false} custom={50}>
                 <Image src="/alice/cake-slice.png" h="80px" />
               </motion.div>
               <Image src="/alice/potion.png" h="100px" />
