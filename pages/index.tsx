@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Center, Text, Flex, Square, Box } from '@chakra-ui/react'
 import Link from 'next/link'
 import { book } from 'data/alice'
+import { motion } from 'framer-motion'
 
 export default function Wonderland() {
   return (
@@ -11,9 +12,15 @@ export default function Wonderland() {
         <title>Wonderland App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Text textAlign="center" fontSize="3xl" p={4}>
-        {book.title}
-      </Text>
+      <motion.div
+        initial={{ opacity: 0, y: '-100px' }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        <Text textAlign="center" fontSize="3xl" p={4}>
+          {book.title}
+        </Text>
+      </motion.div>
       <Flex paddingY={10}>
         {book.chapters.map((chapter, index) => (
           <Box p={4} key={index}>
