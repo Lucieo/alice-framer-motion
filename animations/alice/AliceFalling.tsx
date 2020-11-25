@@ -17,6 +17,7 @@ const fallingVariant = {
 const AliceFalling = () => {
   return (
     <Center p={10}>
+      {/* @ts-ignore */}
       <motion.div variants={fallingVariant} animate="visible">
         <Image src="/alice/aliceFalling.png" maxH="200px" />
       </motion.div>

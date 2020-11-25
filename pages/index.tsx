@@ -28,6 +28,9 @@ const chapterCardVariant = {
     scale: 1.1,
     transition: { type: 'spring', bounce: 0.6 },
   },
+  tap: {
+    opacity: 0.4,
+  },
 }
 
 export default function AliceFramerMotion() {
@@ -48,7 +51,11 @@ export default function AliceFramerMotion() {
         <Flex paddingY={10}>
           {book.chapters.map((chapter, index) => (
             <Box p={4} key={index}>
-              <motion.div whileHover="hover" variants={chapterCardVariant}>
+              <motion.div
+                whileHover="hover"
+                whileTap="tap"
+                variants={chapterCardVariant}
+              >
                 <Link href={`/chapter/${index + 1}`}>
                   <Square
                     size="200px"

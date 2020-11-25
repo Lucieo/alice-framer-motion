@@ -24,6 +24,7 @@ const KeyOnDoor = () => {
   return (
     <Center p={12} flexDirection="column">
       <Image src="/alice/porte.png" maxH="200px" />
+      {/* @ts-ignore */}
       <motion.div variants={keyVariant} animate="visible" initial="hidden">
         <Image src="/alice/cle.png" maxH="100px" />
       </motion.div>

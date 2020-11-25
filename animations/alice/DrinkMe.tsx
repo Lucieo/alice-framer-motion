@@ -55,15 +55,19 @@ const DrinkMe = () => {
               initial="hidden"
               exit="exit"
             >
+              {/* @ts-ignore */}
               <motion.div variants={foodVariant} initial={false} custom={-50}>
                 <Image src="/alice/candy.png" h="80px" />
               </motion.div>
+              {/* @ts-ignore */}
               <motion.div variants={foodVariant} initial={false} custom={100}>
                 <Image src="/alice/pineapple.png" h="80px" />
               </motion.div>
+              {/* @ts-ignore */}
               <motion.div variants={foodVariant} initial={false} custom={-100}>
                 <Image src="/alice/dinde.png" h="80px" />
               </motion.div>
+              {/* @ts-ignore */}
               <motion.div variants={foodVariant} initial={false} custom={50}>
                 <Image src="/alice/cake-slice.png" h="80px" />
               </motion.div>
