@@ -33,7 +33,7 @@ export interface Book {
 }
 
 export const book: Book = {
-  title: 'Alice au Pays de Framer Motion',
+  title: 'Alice au Pays des Merveilles',
   chapters: [
     {
       romanIndex: 'I',

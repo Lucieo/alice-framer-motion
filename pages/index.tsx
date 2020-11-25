@@ -33,7 +33,7 @@ const chapterCardVariant = {
   },
 }
 
-export default function AliceFramerMotion() {
+export default function Home() {
   return (
     <Center height="100vh" flexDirection="column">
       <Head>
@@ -45,10 +45,17 @@ export default function AliceFramerMotion() {
         initial="hidden"
         animate="visible"
       >
-        <Text textAlign="center" fontSize="3xl" p={4}>
-          {book.title}
-        </Text>
-        <Flex paddingY={10}>
+        <Box textAlign="center" fontSize="3xl" p={4}>
+          <Text fontFamily="Dancing Script" fontSize="45px">
+            {book.title}
+          </Text>
+          <Text>de Framer Motion</Text>
+        </Box>
+        <Flex
+          paddingY={10}
+          flexDirection={{ base: 'column', lg: 'row', xl: 'row' }}
+          alignItems="center"
+        >
           {book.chapters.map((chapter, index) => (
             <Box p={4} key={index}>
               <motion.div

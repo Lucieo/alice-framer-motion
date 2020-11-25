@@ -1,19 +1,12 @@
 import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
 
-const theme = extendTheme({
-  fonts: {
-    heading: 'Georgia, serif',
-  },
-})
-
-function AliceFramerMotion({ Component, pageProps }) {
+function AliceFramerMotionApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <Component {...pageProps} />
     </ChakraProvider>
   )
 }
 
-export default AliceFramerMotion
+export default AliceFramerMotionApp

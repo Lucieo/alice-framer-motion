@@ -36,7 +36,9 @@ const Chapter = ({
           <Text fontSize="xl" fontWeight="bold">
             {title}
           </Text>
-          <Text fontSize="2xl">{subtitle}</Text>
+          <Text fontFamily="Dancing Script" fontSize="35px">
+            {subtitle}
+          </Text>
           <Text>
             page {currentPage + 1} / {pages.length}
           </Text>
