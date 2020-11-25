@@ -1,6 +1,11 @@
 import { Box, Center, Text } from '@chakra-ui/react'
 import React from 'react'
-import { BouncingBunny, AliceFalling, KeyOnDoor } from 'animations/alice'
+import {
+  BouncingBunny,
+  AliceFalling,
+  KeyOnDoor,
+  DrinkMe,
+} from 'animations/alice'
 
 const Preview = () => {
   return (
@@ -8,6 +13,9 @@ const Preview = () => {
       <Text paddingTop={6} fontSize="2xl">
         Les animations
       </Text>
+      <Box p={10}>
+        <DrinkMe />
+      </Box>
       <Box p={10}>
         <KeyOnDoor />
       </Box>

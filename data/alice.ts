@@ -1,4 +1,4 @@
-import { BouncingBunny, KeyOnDoor } from 'animations/alice'
+import { BouncingBunny, DrinkMe, KeyOnDoor } from 'animations/alice'
 import AliceFalling from 'animations/alice/AliceFalling'
 
 enum Position {
@@ -89,6 +89,10 @@ export const book: Book = {
         },
         {
           type: PageTypes.TEXT,
+          animation: {
+            position: Position.BOTTOM,
+            component: DrinkMe,
+          },
           paragraphs: [
             'Comme cela n’avançait à rien de passer son temps à attendre à la petite porte, elle retourna vers la table, espérant presque y trouver une autre clef, ou tout au moins quelque grimoire donnant les règles à suivre pour se fermer comme un télescope. Cette fois elle trouva sur la table une petite bouteille (qui certes n’était pas là tout à l’heure). Au cou de cette petite bouteille était attachée une étiquette en papier, avec ces mots « BUVEZ-MOI » admirablement imprimés en grosses lettres.',
             'C’est bien facile à dire « Buvez-moi, » mais Alice était trop fine pour obéir à l’aveuglette. « Examinons d’abord, » dit-elle, « et voyons s’il y a écrit dessus « Poison » ou non. ». Car elle avait lu dans de jolis petits contes, que des enfants avaient été brûlés, dévorés par des bêtes féroces, et qu’il leur était arrivé d’autres choses très-désagréables, tout cela pour ne s’être pas souvenus des instructions bien simples que leur donnaient leurs parents : par exemple, que le tisonnier chauffé à blanc brûle les mains qui le tiennent trop longtemps ; que si on se fait au doigt une coupure profonde, il saigne d’ordinaire ; et elle n’avait point oublié que si l’on boit immodérément d’une bouteille marquée « Poison » cela ne manque pas de brouiller le cœur tôt ou tard.',
