@@ -1,4 +1,10 @@
-import { BouncingBunny, DrinkMe, KeyOnDoor } from 'animations/alice'
+import {
+  AliceLeaves,
+  AliceShrinking,
+  BouncingBunny,
+  DrinkMe,
+  KeyOnDoor,
+} from 'animations/alice'
 import AliceFalling from 'animations/alice/AliceFalling'
 
 enum Position {
@@ -68,6 +74,10 @@ export const book: Book = {
           ],
         },
         {
+          animation: {
+            position: Position.BOTTOM,
+            component: AliceLeaves,
+          },
           type: PageTypes.TEXT,
           paragraphs: [
             'Bientôt elle reprit : « Si j’allais traverser complétement la terre ? Comme ça serait drôle de se trouver au milieu de gens qui marchent la tête en bas. Aux Antipathies, je crois. » (Elle n’était pas fâchée cette fois qu’il n’y eût personne là pour l’entendre, car ce mot ne lui faisait pas l’effet d’être bien juste.) « Eh mais, j’aurai à leur demander le nom du pays. — Pardon, Madame, est-ce ici la Nouvelle-Zemble ou l’Australie ? » — En même temps elle essaya de faire la révérence. (Quelle idée ! Faire la révérence en l’air ! Dites-moi un peu, comment vous y prendriez-vous ?) « Quelle petite ignorante ! pensera la dame quand je lui ferai cette question. Non, il ne faut pas demander cela ; peut-être le verrai-je écrit quelque part. »',
@@ -100,6 +110,10 @@ export const book: Book = {
           ],
         },
         {
+          animation: {
+            position: Position.TOP,
+            component: AliceShrinking,
+          },
           type: PageTypes.TEXT,
           paragraphs: [
             '« Je me sens toute drôle, » dit Alice, « on dirait que je rentre en moi-même et que je me ferme comme un télescope. » C’est bien ce qui arrivait en effet. Elle n’avait plus que dix pouces de haut, et un éclair de joie passa sur son visage à la pensée qu’elle était maintenant de la grandeur voulue pour pénétrer par la petite porte dans ce beau jardin. Elle attendit pourtant quelques minutes, pour voir si elle allait rapetisser encore. Cela lui faisait bien un peu peur. « Songez donc, » se disait Alice, « je pourrais bien finir par m’éteindre comme une chandelle. Que deviendrais-je alors ? » Et elle cherchait à s’imaginer l’air que pouvait avoir la flamme d’une chandelle éteinte, car elle ne se rappelait pas avoir jamais rien vu de la sorte.',

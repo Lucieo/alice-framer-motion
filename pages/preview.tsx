@@ -5,6 +5,7 @@ import {
   AliceFalling,
   KeyOnDoor,
   DrinkMe,
+  AliceLeaves,
 } from 'animations/alice'
 import Head from 'next/head'
 
