@@ -19,8 +19,12 @@ const Page = ({ animation, paragraphs, type }: IPage) => {
     <Box minH="70vh">
       <motion.div variants={opacityChangeVariant}>
         {animation && animation.position === 'top' && <AnimationComponent />}
-        {paragraphs.map((paragraph) => (
-          <Text paddingY={2} textAlign={type === 'text' ? 'left' : 'center'}>
+        {paragraphs.map((paragraph, idx) => (
+          <Text
+            key={idx}
+            paddingY={2}
+            textAlign={type === 'text' ? 'left' : 'center'}
+          >
             {paragraph}
           </Text>
         ))}
